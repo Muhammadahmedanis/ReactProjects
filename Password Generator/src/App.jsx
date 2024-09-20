@@ -13,14 +13,14 @@ function App() {
     let pass = '';
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if(num) str+= "0123456789";
-    if(sym) str+= '!@#$%^&*()';
+    if(sym) str+= "!@#$%^&*()";
     for(let i = 0; i < length; i++){
       let getPass = Math.floor(Math.random() * str.length);
       pass += str.charAt(getPass); 
     }
     setPass(pass);
   }, [length, num, sym, setPass])
-  
+
   const copyPassword = useCallback(() => {
     passRef.current?.select();
     // passRef.current?.setSelectionRange(0, 3)
