@@ -20,7 +20,7 @@ function App() {
     }
     setPass(pass);
   }, [length, num, sym, setPass])
-
+  
   const copyPassword = useCallback(() => {
     passRef.current?.select();
     // passRef.current?.setSelectionRange(0, 3)
