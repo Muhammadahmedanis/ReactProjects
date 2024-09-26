@@ -5,9 +5,6 @@ import PackingList from './Components/PackingList';
 import Stats from './components/Stats';
 
 function App() {
-  // const [itemList, setItemList] = useState([]);
-  // const [checkedItems, setCheckedItems] = useState([]); // Track checked items
-
   const[itemList, setItemList] = useState([]);
   const[checkedItems, setCheckedItems] = useState([]);
   const[sortList, setSortList] = useState();
