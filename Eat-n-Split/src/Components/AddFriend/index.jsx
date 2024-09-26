@@ -8,6 +8,8 @@ function AddFriend({friends, setFriends}) {
         oldFriends.push({
             name: frName,
             img: frImg,
+            amountTake: '',
+            myExpen: 0,
         })
         setFriends(oldFriends);
         setFrName('');
@@ -16,11 +18,11 @@ function AddFriend({friends, setFriends}) {
   return (
     <div className=''>
         <div className='flex gap-3 justify-between'>
-            <label className='font-bold' htmlFor=""> &#x1F46B; Friends Name</label>
+            <label className='font-semibold' htmlFor=""> &#x1F46B; Friends Name</label>
             <input value={frName} onChange={(e) => setFrName(e.target.value)} className='rounded px-1' type="text" />
         </div>
         <div className='flex gap-3 my-2 justify-between'>
-            <label className='font-bold' htmlFor="">Image URL</label>
+            <label className='font-semibold' htmlFor="">&#128247;Image URL</label>
             <input value={frImg} onChange={(e) => setFrImg(e.target.value)} className='rounded px-1' type="text" />
         </div>
         <div className='float-end'>

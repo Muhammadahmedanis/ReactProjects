@@ -13,7 +13,7 @@ function App() {
       name: "Ali",
       payment: 0,
       amountTake: "",
-      myExpen: 0,
+      myExpen: 10,
     },
     {
       img: "https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727222400&semt=ais_hybrid",
@@ -43,8 +43,8 @@ function App() {
     <>
     <div className='flex justify-center gap-10 flex-wrap mt-24'>
 
-      <div className='flex justify-center flex-col'>
-        <div className='mx-auto min-w-96 p-4 h-auto bg-orange-200 rounded-md'>
+      <div className='flex justify-center px-2 flex-col'>
+        <div className='mx-auto max-w-96 p-3 h-auto  bg-orange-200 rounded-md'>
           <Friends friends={friends} setSelectFriend={setSelectFriend}/>
         </div>
 
@@ -55,10 +55,10 @@ function App() {
 
         {openAddFriend && 
           <div>
-            <div className='mx-auto min-w-96 my-1 p-4 min-h-36 bg-orange-200 rounded-md'>
+            <div className='mx-auto max-w-96 my-1 p-4 min-h-36 bg-orange-200 rounded-md'>
               <AddFriend friends={friends} setFriends={setFriends} />
             </div>
-            <div className='mx-auto'>
+            <div className='mx-auto text-center'>
                 <button onClick={closeHandler} type="button" className="items-center px-7 py-2 my-1 text-sm font-medium text-center text-black bg-orange-400 rounded-lg hover:bg-orange-300 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-orange-600"> Close </button>
             </div>  
           </div>

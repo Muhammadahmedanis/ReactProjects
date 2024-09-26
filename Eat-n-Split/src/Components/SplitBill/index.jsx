@@ -30,9 +30,9 @@ function SplitBill({friends, setFriends, selectFriend}) {
   return (
     <>
     {selectFriend &&
-      <div className='w-96 h-auto bg-orange-200 rounded'> 
+      <div className='w-96 h-auto mx-2 mb-2 bg-orange-200 rounded'> 
       <div className='py-2 px-4'>
-        <h1 className='text-xl text-center my-2 font-extrabold'>SPLIT A BILL WITH {selectFriend.name}</h1>
+        <h1 className='text-xl text-center my-2 font-extrabold'>SPLIT A BILL WITH {selectFriend.name.toUpperCase()}</h1>
         <div className='flex justify-between my-3'>
           <p className='font-semibold'>&#128176; Bill value</p>
           <input value={bill} onChange={(e) => setBill(e.target.value)} className='rounded p-1 w-36' type="number" />

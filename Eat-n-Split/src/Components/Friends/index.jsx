@@ -21,12 +21,12 @@ const Freind = ({friendsDetail, setSelectFriend}) => {
         <div className="font-medium dark:text-white">
             <div>{friendsDetail.name}</div>
             <div className="text-sm text-gray-500 dark:text-gray-400">
-              {friendsDetail.payment && friendsDetail.amountTake !== "You" && friendsDetail.amountTake !== friendsDetail.name ? (
+              { friendsDetail.payment && friendsDetail.amountTake !== "You" && friendsDetail.amountTake !== friendsDetail.name ? (
                   // You owe the friend
                   `You owe ${friendsDetail.name} ${friendsDetail.payment}$`
                 ) : friendsDetail.amountTake === "You" ? (
                   // The friend owes you
-                  `${friendsDetail.name} owes you ${friendsDetail.payment}$`
+                  `${friendsDetail.name} owe you ${friendsDetail.payment}$`
                 ) : friendsDetail.amountTake === friendsDetail.name ? (
                   // You owe the friend (using myExpen)
                   `You owe ${friendsDetail.name} ${friendsDetail.myExpen}$`
