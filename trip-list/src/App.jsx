@@ -10,20 +10,23 @@ function App() {
 
   const[itemList, setItemList] = useState([]);
   const[checkedItems, setCheckedItems] = useState([]);
+  const[sortList, setSortList] = useState();
 
   return (
     <>
-      Nav component
+    <div className='m-2'>
+      {/* Nav component */}
       <Nav />
       
       {/* Form Components */}
-      <Form itemList={itemList} setItemList={setItemList} />
+      <Form itemList={itemList} setItemList={setItemList} setSortList={setSortList} />
 
       {/* PackingList */}
-      <PackingList itemList={itemList} setItemList={setItemList} checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
+      <PackingList itemList={itemList} setItemList={setItemList} checkedItems={checkedItems} setCheckedItems={setCheckedItems} sortList={sortList}/>
 
       {/* Stats */}
       <Stats itemList={itemList} checkedItems={checkedItems}/>
+    </div>
     </>
   );
 }

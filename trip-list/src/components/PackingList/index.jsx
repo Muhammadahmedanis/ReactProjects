@@ -1,6 +1,17 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
-function PackingList({itemList, setItemList, CheckedItems, setCheckedItems}) {
+function PackingList({itemList, setItemList, CheckedItems, setCheckedItems, sortList}) {
+
+  useEffect(() => {
+    if(sortList === "quantity"){
+      const sorted = [...itemList].sort((a, b) => a.itemNum - b.itemNum);
+      setItemList(sorted);
+    } else if(sortList === "alphabaticalOrder"){
+      const sorted = [...itemList].sort((a, b) => a.inp.localeCompare(b.inp));
+      setItemList(sorted);
+    }
+  }, [sortList])
+  
   const handleCheck = (isCheck, ind) => {
     if(isCheck){
       setCheckedItems((prev) => [...prev, ind]);
