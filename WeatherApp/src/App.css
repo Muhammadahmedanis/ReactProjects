@@ -41,10 +41,13 @@
   color: #888;
 } */
 
-
 .main{
-  height: 450px;
+  height: 650px;
   width: 450px;
+  background-color: white;
+}
+.img{
+  height: 400px;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIIxa5NiFq386rNRBu52gVtSFFM4mODdBkw&s');
   background-repeat: no-repeat;
   background-size: cover;
